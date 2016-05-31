@@ -1,0 +1,517 @@
+<section class="center theme-bandit" data-background-transition="zoom" data-background-color="#222222">
+    <h3>Introducing</h3>
+    <h1>Bandit</h1>
+</section>
+
+<section class="center theme-bandit" data-background-transition="zoom" data-background-color="#2c2c2c">
+    <h3>A methodology to write highly modular and scalable CSS in a modular and scalable application</h3>
+</section>
+
+<section class="center theme-bandit" data-background-transition="zoom" data-background-color="#282828">
+
+    <h1>Goal</h1>
+
+   <h2>Smooth DX, visual order, simplicity.</h2>
+
+
+
+    <figure class="fragment">
+        <img class="plain" src="../../lib/images/happy_developer.png" />
+        <figcaption>(happy developer)</figcaption>
+    </figure>
+</section>
+
+<section class="center theme-bandit" data-background-transition="zoom" data-background-color="#2c2c2c">
+
+    <h1>Paradigms</h1>
+
+    <!--<ul>-->
+        <!--<li>Confining styles</li>-->
+        <!--<li>Prevent unexpected changes on other modules</li>-->
+        <!--<li>Embraces semantics, class names should communicate useful informations to developers.</li>-->
+        <!--<li>Low-maintenance code</li>-->
+    <!--</ul>-->
+
+</section>
+
+
+<section class="theme-bandit" data-background-transition="zoom" data-background-color="#282828">
+
+    <h2>Encapsulated styles</h2>
+    <h4>Forget about specificity issues</h4>
+
+    <!--@formatter:off-->
+                <pre>
+                    <code>
+&lt;section class="ProductsItemView">
+
+    <header class="ProductsItemView-head">Title</header>
+
+    <div class="ProductsItemView-content">
+        <span class="truncate-right">Content</span>
+    </div>
+
+    <div class="ProductsItemView-footer">Price tag</div>
+
+&lt;/section>
+                    </code>
+                </pre>
+                    <pre>
+                    <code>
+.ProductsItemView {}
+
+.ProductsItemView-head {}
+
+.ProductsItemView-footer {}
+                    </code>
+                </pre>
+                <!--@formatter:on-->
+
+    <p>No unexpected changes on other modules</p>
+</section>
+
+<section class="theme-bandit" data-background-transition="zoom" data-background-color="#2c2c2c">
+    <h2>A Naming convention</h2>
+    <h4>from BEM</h4>
+    <h2 style="text-transform: none;">
+        .<i>UniqueIdentifier</i><strong>-</strong><i>componentName</i><strong>-</strong><i>variant</i></h2>
+
+    <ol class="fragment" style="margin-bottom:32px;">
+        <li><strong>UniqueIdentifier:</strong> camel case, capital or not. Long or short. Up to you.</li>
+        <li><strong>componentName (or whatever makes sense):</strong> camel case, preceeded by a hyphen.</li>
+        <li><strong>variant/state:</strong> lower case, optional, preceeded by a hyphen.</li>
+    </ol>
+
+    <div class="fragment">
+        <p>Apart from the unique identifier, and because of that, anything that follows may not have strict rules.</p>
+        <p>The key point: class names should communicate useful informations to developers.</p>
+    </div>
+
+</section>
+
+<section class="theme-bandit" data-background-transition="zoom" data-background-color="#282828">
+    <h2>Flat hierarchy of class based selectors</h2>
+    <h4>from BEM</h4>
+    <ul>
+        <li>All elements get the same specificity.</li>
+        <li>Selectors are fast.</li>
+        <li>The unique identifiers isolate the rules already.</li>
+    </ul>
+
+    <!--@formatter:off-->
+                <pre>
+                    <code>
+.MyView{}
+
+.MyView-itemWrapper{}
+
+.MyView-mediaObject{}
+
+.MyView-mediaObject-bg1{}
+                    </code>
+                </pre>
+<!--@formatter:on-->
+</section>
+
+<section class="theme-bandit" data-background-transition="zoom" data-background-color="#2c2c2c">
+    <h2>Abstract and organize basic components</h2>
+    <h4>from SMACSS</h4>
+
+    <p>There should be a common set of classes for basic elements or components</p>
+    <ul>
+        <li>Resets, Normalize</li>
+        <li>Buttons</li>
+        <li>Typography</li>
+        <li>Dropdowns</li>
+        <li>Avatars etc.</li>
+
+    </ul>
+    <p>It could be a framework like Bootstrap or your own set of common styles</p>
+</section>
+
+<section class="theme-bandit" data-background-transition="zoom" data-background-color="#282828">
+    <h2>Separate skin and structure</h2>
+    <h4>from OOCSS</h4>
+
+    <p>Each module has two css files</p>
+
+    <!--<ul>-->
+        <!--<li><strong>Layout:</strong> .-->
+        <!--</li>-->
+        <!--<li><strong>Theme:</strong> small, .-->
+            <!--styles.-->
+        <!--</li>-->
+    <!--</ul>-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                MyModule-layout.css
+                <!--@formatter:off-->
+                <pre>
+                    <code>
+.MyModule{
+    width: 50%;
+}
+
+.MyModule-leftSide{
+    float: left;
+    width: 30%;
+}
+
+
+.MyModule-rightSide{
+    float: right;
+    width: 70%;
+}
+                    </code>
+                </pre>
+                <!--@formatter:on-->
+                styles related to the arrangement of the visual elements, usually grid styles.
+            </div>
+            <div class="col-sm-6">
+                MyModule-theme.css
+                <!--@formatter:off-->
+                <pre>
+                    <code>
+.MyModule{
+    background-color: red;
+}
+
+.MyModule-rightSide{
+    border: 1px solid blue;
+    padding:10px:
+}
+
+
+.MyModule-descriptionText{
+    color: green;
+    text-transform: capitalize;
+}
+                    </code>
+                </pre>
+                <!--@formatter:on-->
+                contains module specific rules.
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="theme-bandit" data-background-transition="zoom" data-background-color="#2c2c2c">
+    <h2>Files organisation</h2>
+    <h4>from CSS Modules</h4>
+
+    <div class="container-fluid" style="text-align: left;">
+        <div class="row">
+            <div class="col-sm-6">
+
+                <ul>
+                    <li>All the files that create a module are contained within a folder.</li>
+                    <li>Styles go away when module goes away.</li>
+                </ul>
+
+
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    - <i>mymodule/</i><br>
+                    | - <i>js/</i><br>
+                    | &nbsp;-- mymodule.js<br>
+                    | - <i>templates/</i><br>
+                    | &nbsp;-- mytemplate.js<br>
+                    | - <i>css/</i><br>
+                    | &nbsp;-- <strong>mymodule-layout.css</strong><br>
+                    | &nbsp;-- <strong>mymodule-theme.css</strong><br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="theme-bandit" data-background-transition="zoom" data-background-color="#2c2c2c">
+    <h2>Multi-class pattern</h2>
+    <h4>from Bootstrap</h4>
+    <!--@formatter:off-->
+                    <pre>
+                        <code>
+<div class=" myModName-head  myModName-head-bg1 ">...</div>
+                        </code>
+                    </pre>
+    <!--@formatter:on-->
+
+    <p>Universal styles for the element with myModName-head<br>
+        specific styles to the variant with myModName-head-bg1</p>
+
+
+    <!--@formatter:off-->
+                    <pre>
+                        <code>
+<button class=" myModName-action  btn  btn-danger ">...</button>
+                        </code>
+                    </pre>
+                    <!--@formatter:on-->
+<p>or mix with global classes</p>
+
+
+</section>
+
+<section class="center theme-bandit" data-background-transition="zoom" data-background-color="#222222">
+
+    <h2>Example of a module</h2>
+
+</section>
+
+<section class="center theme-bandit" data-background-transition="zoom" data-background-color="#282828">
+    DealsDocumentDetails-layout.html
+    <!--@formatter:off-->
+    <pre>
+        <code>
+&lt;section class="DealsDocumentDetails">
+
+    <aside class="DealsDocumentDetails-thumbnail">
+        &lt;img src="cute-kitten.jpg">
+    </aside>
+
+    <div class="DealsDocumentDetails-article">
+
+        <p class="DealsDocumentDetails-description">Item content description</p>
+
+        <div class="DealsDocumentDetails-tags">
+            <h4>Tags</h4>
+            <ul>
+                <li>Tag</li>
+                <li>Tag</li>
+            </ul>
+        </div>
+    </div>
+
+&lt;/section>
+        </code>
+    </pre>
+    <!--@formatter:on-->
+
+
+</section>
+
+<section class="center theme-bandit" data-background-transition="zoom" data-background-color="#282828">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                DealsDocumentDetails-layout.scss
+                <!--@formatter:off-->
+<pre>
+    <code>
+@import "{{vendor-path}}/bootstrap";
+@import "{{resources-path}}/variables";
+
+.DealsDocumentDetails {
+
+    @include make-row();
+
+    &-thumbnail {
+        @include make-sm-column(6);
+        @include make-md-column(3);
+        max-width:100%;
+    }
+
+    &-article {
+        @include make-sm-column(6);
+        @include make-md-column(9);
+    }
+
+    &-tags{
+        margin: $base-spacer;
+    }
+}
+
+    </code>
+</pre>
+<!--@formatter:on-->
+            </div>
+            <div class="col-sm-6">
+                DealsDocumentDetails-layout.css
+                <!--@formatter:off-->
+                <pre class="smaller">
+                    <code>
+.DealsDocumentDetails {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.DealsDocumentDetails:before, .DealsDocumentDetails:after {
+  content: " ";
+  display: table;
+}
+
+.DealsDocumentDetails:after {
+  clear: both;
+}
+
+.DealsDocumentDetails-thumbnail {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .DealsDocumentDetails-thumbnail {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .DealsDocumentDetails-thumbnail {
+    float: left;
+    width: 25%;
+  }
+}
+
+.DealsDocumentDetails-article {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .DealsDocumentDetails-article {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .DealsDocumentDetails-article {
+    float: left;
+    width: 75%;
+  }
+}
+
+.DealsDocumentDetails-article-tags {
+  margin: 16px;
+}
+
+                    </code>
+                </pre>
+                <!--@formatter:on-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="center theme-bandit" data-background-transition="zoom" data-background-color="#2c2c2c">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                DealsDocumentDetails-theme.scss
+                <!--@formatter:off-->
+<pre>
+    <code>
+@import "{{resources-path}}/variables";
+
+.DealsDocumentDetails {
+
+    background-color: $light-bg-color;
+
+    &-description{
+        padding: $base-spacer / 2;
+        color: $text-color;
+        font-size: $font-size-regular;
+    }
+
+    &-tags{
+        background-color: $medium-bg-color;
+        text-transform: uppercase;
+        font-size: $font-size-small;
+    }
+}
+
+    </code>
+</pre>
+<!--@formatter:on-->
+            </div>
+            <div class="col-sm-6">
+                DealsDocumentDetails-theme.css
+                <!--@formatter:off-->
+                <pre>
+                    <code>
+.DealsDocumentDetails {
+  background-color: #f5f5f5;
+}
+.DealsDocumentDetails-description {
+  padding: 8px;
+  color: #363ae3;
+  font-size: 1em;
+}
+.DealsDocumentDetails-tags {
+  background-color: #dbdbdb;
+  text-transform: uppercase;
+  font-size: 0.6em;
+}
+
+                    </code>
+                </pre>
+                <!--@formatter:on-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="canter theme-bandit" data-background-transition="zoom" data-background-color="#282828">
+    <h2>CSS output</h2>
+    <h4>891 bytes</h4>
+    <!--@formatter:off-->
+    <pre>
+        <code>
+.DealsDocumentDetails-article,.DealsDocumentDetails-thumbnail{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.DealsDocumentDetails{margin-left:-15px;margin-right:-15px;background-color:#f5f5f5}.DealsDocumentDetails:after,.DealsDocumentDetails:before{content:" ";display:table}.DealsDocumentDetails:after{ clear:both}.DealsDocumentDetails-thumbnail{max-width:100%}@media (min-width:768px){.DealsDocumentDetails-thumbnail{float:left;width:50%}} @media (min-width:992px){.DealsDocumentDetails-thumbnail{float:left;width:25%}}@media (min-width:768px){.DealsDocumentDetails-article{float:left;width:50%}}@media (min-width:992px){.DealsDocumentDetails-article{float:left;width:75%}}.DealsDocumentDetails-article-description{padding:8px;color:#363ae3;font-size:1em}.DealsDocumentDetails-article-tags{margin:16px;background-color:#dbdbdb;text-transform:uppercase;font-size:.6em}
+        </code>
+    </pre>
+    <!--@formatter:on-->
+
+
+</section>
+
+<section class="theme-bandit" data-background-transition="zoom" data-background-color="#222222">
+    <h2>You could say</h2>
+    <h3 class="fragment">You're going to have duplicated code!</h3>
+    <h4 class="fragment">Yes.</h4>
+    <h3 class="fragment">At least you could use abstract classes for the grid styles!</h3>
+
+    <div class="fragment">
+        <h4>Like this?</h4>
+
+        <!--@formatter:off-->
+        <pre>
+            <code>
+                <div class="DealsDocumentDetails-thumbnail col-sm-6 col-md-3">...</div>
+            </code>
+        </pre>
+        <!--@formatter:on-->
+        <p>It means saving a few bytes at the expense of readability and maintainability</p>
+
+    </div>
+
+    <h3 class="fragment">So what if we have ten dozens of modules in our app!</h3>
+    <h4 class="fragment">Then you have 100kb of CSS</h4>
+
+</section>
+
+
+<section class="center theme-bandit" data-background-transition="zoom" data-background-color="#2c2c2c">
+    <h1>TBD</h1>
+</section>
+

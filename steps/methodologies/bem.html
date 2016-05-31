@@ -1,0 +1,127 @@
+
+    <section class="center theme-bem" data-background-transition="zoom" data-background-color="#222222">
+        <h1>BEM (Block, Element, Modifier)</h1>
+        <h2>A concrete application of OOCSS</h2>
+
+        <!--@formatter:off-->
+                <pre>
+                    <code>
+.block {}
+.block__element {}
+.block--modifier {}
+.block__element--modifier {}
+                    </code>
+                </pre>
+<!--@formatter:on-->
+        <div>
+
+        </div>
+    </section>
+
+    <section data-background-transition="zoom" data-background-color="#282828" class="theme-bem">
+        <h4>BEM in a nutshell</h4>
+        <h2>It tries to address the naming issue</h2>
+
+        <div class="container-fluid">
+<div class="row">
+    <div class="col-sm-6">
+        from
+        <!--@formatter:off-->
+                <pre>
+                    <code>
+.person {}
+.hand {}
+.female {}
+.female-hand {}
+.left-hand {}
+                    </code>
+                </pre>
+<!--@formatter:on-->
+
+    </div>
+    <div class="col-sm-6">
+        to
+        <!--@formatter:off-->
+                <pre>
+                    <code>
+.person {}
+.person__hand {}
+.person--female {}
+.person--female__hand {}
+.person__hand--left {}
+                    </code>
+                </pre>
+<!--@formatter:on-->
+    </div>
+</div>
+            <div class="row">
+                <div class="col-sm-6">
+                    from
+                    <!--@formatter:off-->
+                <pre>
+                    <code>
+<div class="media  user  premium">
+  &lt;img class="img photo avatar"/>
+  <p class="body  bio">...</p>
+</div>
+                    </code>
+                </pre>
+<!--@formatter:on-->
+
+                </div>
+                <div class="col-sm-6">
+                    to
+                    <!--@formatter:off-->
+                <pre>
+                    <code>
+<div class="media  user  user--premium">
+  &lt;img class="media__img user__photo avatar"/>
+  <p class="media__body  user__bio">...</p>
+</div>
+                    </code>
+                </pre>
+<!--@formatter:on-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section data-background-transition="zoom" data-background-color="#2c2c2c" class="theme-bem">
+        <h4>BEM in a nutshell</h4>
+        <h2>Merits</h2>
+        <ul>
+            <li>Abstraction of modules into BEM modules (blocks)</li>
+            <li>Single responsibility principle (SRP) approach</li>
+            <li>Strict rules</li>
+            <li>Lower specificity, equally-specific class selectors</li>
+            <li>Fast prototypes</li>
+        </ul>
+    </section>
+
+    <section data-background-transition="zoom" data-background-color="#222222" class="theme-bem">
+        <h4>BEM in a nutshell</h4>
+        <h2>Faults</h2>
+        <ul>
+            <li>Bloats the HTML
+                <!--@formatter:off-->
+                <pre><code>
+<a class="link link__control menu-list__link menu-list__link_type_simple i-bem"  href="#some-anchor">
+    Look! Classes!
+</a>
+                </code></pre>
+<!--@formatter:on-->
+            </li>
+            <li>Bad DX, poor readability</li>
+            <li>Easy to abuse descendants selectors
+                <!--@formatter:off-->
+                <pre><code>
+.classes__about__five__levels__deep{}
+.block__element__element{}
+                </code></pre>
+<!--@formatter:on-->
+            </li>
+            <li>Frequent changes on HTML</li>
+            <li>Learning curve</li>
+            <li>Difficult abstractions sometimes</li>
+        </ul>
+    </section>

@@ -1,0 +1,138 @@
+<section class="center theme-bemit" data-background-transition="zoom" data-background-color="#222222">
+    <h1>BEMIT</h1>
+    <h2>Augmented BEM naming convention</h2>
+</section>
+
+
+<section data-background-transition="zoom" data-background-color="#282828" class="theme-bemit">
+    <h4>BEMIT in a nutshell</h4>
+    <h2>Namespaces add another layer of rich meaning</h2>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-6">
+                from
+                <!--@formatter:off-->
+                <pre>
+                    <code>
+<div class="media user user--premium">
+  &lt;img class="media__img user__photo avatar"/>
+  <p class="media__body user__bio">...</p>
+</div>
+                    </code>
+                </pre>
+<!--@formatter:on-->
+
+            </div>
+            <div class="col-sm-6">
+                to
+                <!--@formatter:off-->
+                <pre>
+                    <code>
+<div class="o-media c-user c-user--premium">
+  &lt;img class="o-media__img c-user__photo c-avatar"/>
+  <p class="o-media__body c-user__bio">...</p>
+</div>
+                    </code>
+                </pre>
+<!--@formatter:on-->
+            </div>
+        </div>
+    </div>
+
+    <p>c- for Components, o- for Objects, u- for Utilities, and is-/has- for States</p>
+
+</section>
+
+<section data-background-transition="zoom" data-background-color="#282828" class="theme-bemit">
+    <h4>BEMIT in a nutshell</h4>
+    <h2>Responsive Suffixes</h2>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-6">
+                from
+                <!--@formatter:off-->
+                <pre>
+                    <code>
+<div class="o-media c-user c-user--premium">
+  &lt;img class="o-media__img c-user__photo c-avatar"/>
+  <p class="o-media__body c-user__bio">...</p>
+</div>
+                    </code>
+                </pre>
+<!--@formatter:on-->
+
+            </div>
+            <div class="col-sm-6">
+                to
+                <!--@formatter:off-->
+                <pre>
+                    <code>
+<div class="o-media@md c-user c-user--premium">
+  &lt;img class="o-media__img@md c-user__photo c-avatar"/>
+  <p class="o-media__body@md c-user__bio">...</p>
+</div>
+                    </code>
+                </pre>
+<!--@formatter:on-->
+            </div>
+        </div>
+    </div>
+
+    <p>"this class when at this size"</p>
+
+</section>
+
+<section data-background-transition="zoom" data-background-color="#282828" class="theme-bemit">
+    <h4>BEMIT in a nutshell</h4>
+    <h2>Responsive Suffixes examples</h2>
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <!--@formatter:off-->
+                <pre>
+                    <code class="css">
+/* escape the &commat; symbol in your CSS file */
+
+@media print {
+
+  .u-hidden\@print {
+    display: none;
+  }
+
+}
+
+                    </code>
+                </pre>
+<!--@formatter:on-->
+
+            </div>
+            <div class="col-sm-6">
+                <!--@formatter:off-->
+                <pre>
+                    <code class="css">
+.u-hidden\@print{
+    /* hide things when in print context. */
+}
+
+.u-1/4\@lg{
+    /* a quarter width in the large breakpoint. */
+}
+
+.o-layout\@md{
+    /* a layout object in the medium breakpoint. */
+}
+                    </code>
+                </pre>
+<!--@formatter:on-->
+            </div>
+        </div>
+    </div>
+
+</section>

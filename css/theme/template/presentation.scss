@@ -1,0 +1,183 @@
+
+.reveal {
+  section {
+    .smaller {
+      font-size: 70%;
+    }
+
+    .bigger-code{
+      .hljs {
+        font-size:24px;
+        line-height: 24px;
+      }
+    }
+
+    ul{
+      padding:0;
+    }
+
+    img {
+      border: 0;
+      box-shadow: none;
+      margin: 0;
+
+      &.small{
+        max-height:400px;
+      }
+    }
+
+  }
+
+
+  .speaker-notes{
+    max-height:30%;
+  }
+
+  .fade{
+    opacity:1;
+  }
+
+  pre{
+    code {
+      color: #586e75;
+      max-height: 100%;
+    }
+  }
+
+
+  iframe {
+    min-height: 600px;
+    background-color: transparent;
+    max-width: none;
+    max-height: none;
+  }
+
+  .live-resize-wrapper {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .breakpoints-data {
+    font-size: 20px;
+
+    td{
+      height: 70px;
+      vertical-align: middle;
+    }
+
+    th{
+      height:120px;
+    }
+
+    code{
+      font-size:28px;
+    }
+  }
+
+  .demo-resize-menu {
+    list-style-type: none;
+    margin: 0;
+
+    li {
+      display: inline;
+
+      &.active {
+        font-size: 50px;
+      }
+    }
+
+  }
+
+  .hljs {
+    background-color: white;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .resizable {
+    padding: 15px;
+  }
+
+
+
+  .dots {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    > div {
+      position: absolute;
+      height: 50vh;
+      text-align: center;
+      width: 100%;
+      h3 {
+        padding: 32px 0;
+      }
+
+    }
+  }
+
+  .detached{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+
+  .inline-fragments{
+    position: relative;
+    text-align: center;
+    min-height:500px;
+    >div,>p{
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+
+      img{
+        max-height:70vh;
+        margin: 0 auto;
+      }
+    }
+  }
+
+.html-live-coding{
+  div[class|='col'],
+  .sidebar,
+  .content,
+  .avatars{
+    height:128px;
+    line-height:128px;
+  }
+}
+
+
+}
+
+
+.my-module-main-body {
+  @include make-row();
+  .sidebar {
+    @extend .green;
+    @include make-sm-column( 4 );
+    @include make-md-column( 3 );
+  }
+  .main-content {
+    @include make-sm-column( 8 );
+    @include make-md-column( 9 );
+  }
+  .item {
+    @include make-row();
+    .avatars {
+      @extend .violet;
+      @include make-sm-column( 4 );
+      @include make-md-column( 3 );
+    }
+    .content {
+      @extend .red;
+      @include make-sm-column( 8 );
+      @include make-md-column( 9 );
+    }
+  }
+}

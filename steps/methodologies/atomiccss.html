@@ -1,0 +1,94 @@
+    <section class="center theme-acss" data-background-transition="zoom" data-background-color="#222222">
+        <h1>Atomic Cascading Style Sheets</h1>
+        <h2>map classes to a single style</h2>
+    </section>
+
+    <section class="theme-acss" data-background-transition="zoom" data-background-color="#282828">
+        <h4>Atomic Cascading in a nutshell</h4>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <!--@formatter:off-->
+                <pre>
+                    <code>
+<div class="Bfc M-10">
+    <a href="#anchor" class="Fl-start Mend-10">
+        &lt;img src="pic.jpg" alt="me" width="40" />
+    </a>
+    <div class="Bfc Fz-s">
+        @author 14 minutes ago
+    </div>
+</div>
+                    </code>
+                </pre>
+<!--@formatter:on-->
+
+                </div>
+                <div class="col-sm-6">
+                    <!--@formatter:off-->
+                <pre>
+                    <code>
+.Bfc {
+    overflow: hidden;
+    zoom: 1;
+}
+.M-10 {
+    margin: 10px;
+}
+.Fl-start {
+    float: left;
+}
+.Mend-10 {
+    margin-right: 10px;
+}
+.Fz-s {
+    font-size: smaller;
+}
+                    </code>
+                </pre>
+<!--@formatter:on-->
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="theme-acss" data-background-transition="zoom" data-background-color="#2c2c2c">
+        <h4>Atomic CSS in a nutshell</h4>
+        <h2>Merits</h2>
+        <ul>
+            <li>Abstract styles into reusable LEGO classes</li>
+            <li>Single responsibility principle (SRP) approach</li>
+            <li>Separation of concerns principle</li>
+            <li>Reduced duplication</li>
+            <li>Smaller file size</li>
+            <li>Performance freebies</li>
+            <li>Fast prototyping</li>
+        </ul>
+    </section>
+
+    <section class="theme-acss" data-background-transition="zoom" data-background-color="#282828">
+        <h4>Atomic CSS in a nutshell</h4>
+        <h2>Faults</h2>
+        <ul>
+            <li>Bloats the HTML
+                <!--@formatter:off-->
+                <pre><code>
+<h3 class="mr10 ml5 fl pt16 js-class-for-hook pb16 cr tleft">Boy I got classes</h3>
+                </code></pre>
+<!--@formatter:on-->
+            </li>
+            <li>Looks a bit like inline styling</li>
+            <li>Maintenance and poor DX</li>
+            <li>Issues with RWD
+                <!--@formatter:off-->
+                <pre><code>
+<div class="blk m-10 fr">Here I am</div>
+                </code></pre>
+<!--@formatter:on-->
+            </li>
+            <li>Frequent changes on HTML</li>
+            <li>Possible specificity issues</li>
+        </ul>
+    </section>
