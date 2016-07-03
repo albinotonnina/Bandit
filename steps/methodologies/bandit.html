@@ -7,31 +7,48 @@
     <h3>A methodology to write highly modular and scalable CSS in a modular and scalable application</h3>
 </section>
 
+
 <section class="center theme-bandit" data-background-transition="zoom" data-background-color="#282828">
 
-    <h1>Goal</h1>
+    <h1>Problems we want to address</h1>
 
-   <h2>Smooth DX, visual order, simplicity.</h2>
+    <h2 class="fragment">Have a low-maintenance environment </h2>
+    <h2 class="fragment">Solve issues with multi developer environments</h2>
+    <h2 class="fragment">Dead easy dead code elimination</h2>
+    <h2 class="fragment">Have a Smooth DX, visual order, simplicity.</h2>
 
+    <!--<ul>-->
+        <!--<li class="fragment">-->
+            <!--<del>Global Namespace</del>-->
+        <!--</li>-->
+        <!--<li class="fragment">-->
+            <!--<del>no issues with Dependencies</del>-->
+        <!--</li>-->
+        <!--<li class="fragment">-->
+            <!--<del>Dead Code Elimination</del>-->
+        <!--</li>-->
+        <!--<li class="fragment">-->
+            <!--<del>Sharing Constants</del>-->
+        <!--</li>-->
+        <!--<li class="fragment">-->
+            <!--<del>Non-deterministic resolution</del>-->
+        <!--</li>-->
+        <!--<li class="fragment">-->
+            <!--<del>Isolation</del>-->
+        <!--</li>-->
 
+    <!--</ul>-->
 
-    <figure class="fragment">
-        <img class="plain" src="../../lib/images/happy_developer.png" />
-        <figcaption>(happy developer)</figcaption>
-    </figure>
+    <!--<figure class="fragment">-->
+        <!--<img class="plain" src="../../lib/images/happy_developer.png"/>-->
+        <!--<figcaption>(happy developer)</figcaption>-->
+    <!--</figure>-->
 </section>
 
 <section class="center theme-bandit" data-background-transition="zoom" data-background-color="#2c2c2c">
 
-    <h1>Paradigms</h1>
-
-    <!--<ul>-->
-        <!--<li>Confining styles</li>-->
-        <!--<li>Prevent unexpected changes on other modules</li>-->
-        <!--<li>Embraces semantics, class names should communicate useful informations to developers.</li>-->
-        <!--<li>Low-maintenance code</li>-->
-    <!--</ul>-->
-
+    <h1>Bandit</h1>
+    <h2>Principles</h2>
 </section>
 
 
@@ -135,14 +152,6 @@
 
     <p>Each module has two css files</p>
 
-    <!--<ul>-->
-        <!--<li><strong>Layout:</strong> .-->
-        <!--</li>-->
-        <!--<li><strong>Theme:</strong> small, .-->
-            <!--styles.-->
-        <!--</li>-->
-    <!--</ul>-->
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
@@ -207,22 +216,32 @@
 
                 <ul>
                     <li>All the files that create a module are contained within a folder.</li>
-                    <li>Styles go away when module goes away.</li>
+                    <li class="fragment">Styles go away when module goes away (dead code elimination).</li>
+                    <li class="fragment">Great if you want to load CSS asynchronously</li>
+                    <li class="fragment">Can work in React, Backbone/Marionette, Ember, Angular</li>
                 </ul>
 
 
             </div>
             <div class="col-sm-6">
-                <div>
-                    - <i>mymodule/</i><br>
-                    | - <i>js/</i><br>
-                    | &nbsp;-- mymodule.js<br>
-                    | - <i>templates/</i><br>
-                    | &nbsp;-- mytemplate.js<br>
-                    | - <i>css/</i><br>
-                    | &nbsp;-- <strong>mymodule-layout.css</strong><br>
-                    | &nbsp;-- <strong>mymodule-theme.css</strong><br>
-
+                <div style="background-color: #fff;color: #222;padding: 16px;font-size: 3rem;">
+                    app/<br>
+                    ----modules/<br>
+                    ---------MyModule/<br>
+                    ----------------js/<br>
+                    -------------------MyModule.js<br>
+                    ----------------styles/<br>
+                    -------------------<strong>MyModule-layout.scss</strong><br>
+                    -------------------<strong>MyModule-theme.scss</strong><br>
+                    ----------------templates/<br>
+                    -------------------MyModule.hbs<br>
+                    ----styles/<br>
+                    ---------partials/<br>
+                    ---------------_base.scss<br>
+                    ---------------_buttons.scss<br>
+                    ---------------_grid.scss<br>
+                    ---------<strong>global-styles.scss</strong><br>
+                    ---------<strong>_variables.scss</strong><br>
                 </div>
             </div>
         </div>
@@ -251,7 +270,7 @@
                         </code>
                     </pre>
                     <!--@formatter:on-->
-<p>or mix with global classes</p>
+    <p>or mix with global classes</p>
 
 
 </section>
@@ -475,43 +494,43 @@
     <h2>CSS output</h2>
     <h4>891 bytes</h4>
     <!--@formatter:off-->
-    <pre>
+    <pre style="margin-bottom:32px;">
         <code>
 .DealsDocumentDetails-article,.DealsDocumentDetails-thumbnail{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.DealsDocumentDetails{margin-left:-15px;margin-right:-15px;background-color:#f5f5f5}.DealsDocumentDetails:after,.DealsDocumentDetails:before{content:" ";display:table}.DealsDocumentDetails:after{ clear:both}.DealsDocumentDetails-thumbnail{max-width:100%}@media (min-width:768px){.DealsDocumentDetails-thumbnail{float:left;width:50%}} @media (min-width:992px){.DealsDocumentDetails-thumbnail{float:left;width:25%}}@media (min-width:768px){.DealsDocumentDetails-article{float:left;width:50%}}@media (min-width:992px){.DealsDocumentDetails-article{float:left;width:75%}}.DealsDocumentDetails-article-description{padding:8px;color:#363ae3;font-size:1em}.DealsDocumentDetails-article-tags{margin:16px;background-color:#dbdbdb;text-transform:uppercase;font-size:.6em}
         </code>
     </pre>
     <!--@formatter:on-->
 
-
+<h2>Less abstraction / more isolation</h2>
 </section>
 
-<section class="theme-bandit" data-background-transition="zoom" data-background-color="#222222">
-    <h2>You could say</h2>
-    <h3 class="fragment">You're going to have duplicated code!</h3>
-    <h4 class="fragment">Yes.</h4>
-    <h3 class="fragment">At least you could use abstract classes for the grid styles!</h3>
+<!--<section class="theme-bandit" data-background-transition="zoom" data-background-color="#222222">-->
+    <!--<h2>You could say</h2>-->
+    <!--<h3 class="fragment">You're going to have duplicated code!</h3>-->
+    <!--<h4 class="fragment">Yes.</h4>-->
+    <!--<h3 class="fragment">At least you could use abstract classes for the grid styles!</h3>-->
 
-    <div class="fragment">
-        <h4>Like this?</h4>
+    <!--<div class="fragment">-->
+        <!--<h4>Like this?</h4>-->
 
-        <!--@formatter:off-->
-        <pre>
-            <code>
-                <div class="DealsDocumentDetails-thumbnail col-sm-6 col-md-3">...</div>
-            </code>
-        </pre>
-        <!--@formatter:on-->
-        <p>It means saving a few bytes at the expense of readability and maintainability</p>
+        <!--&lt;!&ndash;@formatter:off&ndash;&gt;-->
+        <!--<pre>-->
+            <!--<code>-->
+                <!--<div class="DealsDocumentDetails-thumbnail col-sm-6 col-md-3">...</div>-->
+            <!--</code>-->
+        <!--</pre>-->
+        <!--&lt;!&ndash;@formatter:on&ndash;&gt;-->
+        <!--<p>It means saving a few bytes at the expense of readability and maintainability</p>-->
 
-    </div>
+    <!--</div>-->
 
-    <h3 class="fragment">So what if we have ten dozens of modules in our app!</h3>
-    <h4 class="fragment">Then you have 100kb of CSS</h4>
+    <!--<h3 class="fragment">So what if we have ten dozens of modules in our app!</h3>-->
+    <!--<h4 class="fragment">Then you have 100kb of CSS</h4>-->
 
-</section>
+<!--</section>-->
 
 
-<section class="center theme-bandit" data-background-transition="zoom" data-background-color="#2c2c2c">
-    <h1>TBD</h1>
-</section>
+<!--<section class="center theme-bandit" data-background-transition="zoom" data-background-color="#2c2c2c">-->
+    <!--<h1>TBD</h1>-->
+<!--</section>-->
 

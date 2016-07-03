@@ -12,9 +12,6 @@ module.exports = function (grunt) {
             ' */'
         },
 
-        qunit: {
-            files: ['test/*.html']
-        },
 
         uglify: {
             options: {
@@ -23,7 +20,13 @@ module.exports = function (grunt) {
             build: {
                 src: 'js/reveal.js',
                 dest: 'js/reveal.min.js'
+            },
+            bundle: {
+                files: {
+                    'js/bundle.min.js': ['lib/js/head.min.js', 'js/reveal.js', 'js/_bower.js', 'js/app.js']
+                }
             }
+
         },
 
         sass: {
@@ -156,20 +159,11 @@ module.exports = function (grunt) {
                     }
                 ],
             },
-        },
-
-        uglify: {
-            build: {
-                files: {
-                    'js/bundle.min.js': ['lib/js/head.min.js', 'js/reveal.js', 'js/_bower.js', 'js/app.js']
-                }
-            }
         }
 
     });
 
     // Dependencies
-    grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -180,10 +174,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-zip');
     grunt.loadNpmTasks('grunt-bower-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-
-    // Default task
-    grunt.registerTask('default', ['css', 'js']);
 
     // JS task
     grunt.registerTask('js', ['jshint', 'uglify']);
@@ -198,15 +188,13 @@ module.exports = function (grunt) {
     grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
 
     // Package presentation to archive
-    grunt.registerTask('package', ['default', 'zip']);
+    grunt.registerTask('package', ['css', 'js', 'zip']);
 
-    // Serve presentation locally
-    grunt.registerTask('serve', ['connect', 'watch']);
 
     // Concat
     grunt.registerTask('build', ['bower_concat', 'copy', 'uglify']);
 
-    // Run tests
-    grunt.registerTask('test', ['jshint', 'qunit']);
+    // Default task
+    grunt.registerTask('default', ['connect', 'watch']);
 
 };

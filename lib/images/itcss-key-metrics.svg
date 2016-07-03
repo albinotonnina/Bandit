@@ -1,1 +1,34 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 584.84 481.31"><defs><style>.cls-1{fill:#fff;}.cls-1,.cls-2,.cls-3{stroke:#000;stroke-miterlimit:10;}.cls-1,.cls-2{stroke-width:3px;}.cls-3{stroke:#fff;}.cls-2,.cls-3{fill:#fff;}.cls-3{stroke-width:2px;}.cls-4{fill:#fff;font-size:24px;font-family:Open Sans;font-weight:700;}.cls-5{fill:#fff;}</style></defs><title>itcss-key-metrics</title><polygon class="cls-1" points="295.75 478.31 45.75 45.3 545.75 45.3 295.75 478.31"/><line class="cls-2" x1="80.97" y1="106.3" x2="510.53" y2="106.3"/><line class="cls-3" x1="61.97" y1="13.8" x2="238.03" y2="13.8"/><polygon class="cls-5" points="65.93 19.61 44.25 13.8 65.93 7.99 65.93 19.61"/><line class="cls-3" x1="8.86" y1="60.64" x2="86.57" y2="195.24"/><polygon class="cls-5" points="5.81 66.98 0 45.3 15.87 61.17 5.81 66.98"/><line class="cls-3" x1="235.43" y1="462.97" x2="168.16" y2="346.45"/><polygon class="cls-5" points="238.48 456.63 244.29 478.31 228.41 462.44 238.48 456.63"/><line class="cls-3" x1="344.7" y1="462.97" x2="408.28" y2="352.84"/><polygon class="cls-5" points="351.71 462.44 335.84 478.31 341.65 456.63 351.71 462.44"/><line class="cls-3" x1="575.98" y1="61.64" x2="505.65" y2="183.46"/><polygon class="cls-5" points="568.97 62.17 584.84 46.3 579.03 67.98 568.97 62.17"/><line class="cls-3" x1="528.03" y1="13.8" x2="356.25" y2="13.8"/><polygon class="cls-5" points="524.07 7.99 545.75 13.8 524.07 19.61 524.07 7.99"/><line class="cls-2" x1="116.61" y1="168.8" x2="474.45" y2="168.8"/><line class="cls-2" x1="153.14" y1="231.3" x2="438.36" y2="231.3"/><line class="cls-2" x1="189.23" y1="293.81" x2="402.28" y2="293.81"/><line class="cls-2" x1="225.31" y1="356.31" x2="366.19" y2="356.31"/><line class="cls-2" x1="260.59" y1="418.81" x2="330.11" y2="418.81"/><text class="cls-4" transform="translate(255.35 20.57)">REACH</text><text class="cls-4" transform="translate(425.34 344.31) rotate(-61.27)">EXPLICITNESS</text><text class="cls-4" transform="translate(86.57 214.3) rotate(60.6)">SPECIFICITY</text></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-128 57 584.8 481.3" style="enable-background:new -128 57 584.8 481.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;}
+	.st4{font-family:'OpenSans-Bold';}
+	.st5{font-size:24px;}
+</style>
+<title>itcss-key-metrics</title>
+<polygon class="st0" points="167.8,535.3 -82.2,102.3 417.8,102.3 "/>
+<line class="st1" x1="-47" y1="163.3" x2="382.5" y2="163.3"/>
+<line class="st2" x1="-66" y1="70.8" x2="110" y2="70.8"/>
+<polygon class="st3" points="-62.1,76.6 -83.8,70.8 -62.1,65 "/>
+<line class="st2" x1="-119.1" y1="117.6" x2="-41.4" y2="252.2"/>
+<line class="st2" x1="107.4" y1="519.9" x2="40.2" y2="403.4"/>
+<polygon class="st3" points="110.5,513.6 116.3,535.3 100.4,519.4 "/>
+<line class="st2" x1="216.7" y1="519.9" x2="280.3" y2="409.8"/>
+<polygon class="st3" points="223.7,519.4 207.8,535.3 213.6,513.6 "/>
+<line class="st2" x1="448" y1="118.6" x2="377.6" y2="240.4"/>
+<line class="st2" x1="400" y1="70.8" x2="228.2" y2="70.8"/>
+<polygon class="st3" points="396.1,65 417.8,70.8 396.1,76.6 "/>
+<line class="st1" x1="-11.4" y1="225.8" x2="346.5" y2="225.8"/>
+<line class="st1" x1="25.1" y1="288.3" x2="310.4" y2="288.3"/>
+<line class="st1" x1="61.2" y1="350.8" x2="274.3" y2="350.8"/>
+<line class="st1" x1="97.3" y1="413.3" x2="238.2" y2="413.3"/>
+<line class="st1" x1="132.6" y1="475.8" x2="202.1" y2="475.8"/>
+<text transform="matrix(1 0 0 1 127.35 77.54)" class="st3 st4 st5">REACH</text>
+<text transform="matrix(0.4807 -0.8769 0.8769 0.4807 297.3401 401.2799)" class="st3 st4 st5">EXPLICITNESS</text>
+<text transform="matrix(0.4909 0.8712 -0.8712 0.4909 -41.4295 271.2699)" class="st3 st4 st5">SPECIFICITY</text>
+</svg>
