@@ -2,6 +2,8 @@
 
 ### Happy with your CSS files in your big app?
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/albinotonnina/Bandit.svg)](https://greenkeeper.io/)
+
 #### OOCSS, BEM, SMACSS, ITCSS, ACSS, ITCSS under attack.
 
 Hello, my name is [Albino Tonnina](http://www.albinotonnina.com).<br> I’m a
